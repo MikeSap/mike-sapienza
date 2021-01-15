@@ -3,7 +3,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 
 const Projects = (props) => {
   const responsive = {
@@ -25,7 +25,7 @@ const Projects = (props) => {
   };
 
   return (
-    <>
+    <Container>
       <Carousel
         swipeable={true}
         draggable={false}
@@ -204,8 +204,7 @@ const Projects = (props) => {
           </Card.Footer>
         </Card>
       </Carousel>
-      ;
-    </>
+    </Container>
   );
 };
 
