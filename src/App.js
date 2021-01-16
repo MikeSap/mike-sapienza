@@ -14,7 +14,11 @@ function App() {
         <Route
           exact path="/"
           render={() => {
-            return <div>Index</div>;
+            return <div>
+              <About />
+              <Projects />
+              {/* <Resume /> */}
+              </div>;
           }}
         />
         <Route

@@ -14,22 +14,22 @@ const NavBar = (props) => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav navbar fill variant="tabs" defaultActiveKey="link-1">
-          <Nav.Item>
+        <Nav navbar fill variant="tabs">
+          {/* <Nav.Item>
             <Nav.Link eventKey="link-1" className="ml-auto" href="/projects">
               Projects
             </Nav.Link>
-          </Nav.Item>
+          </Nav.Item> */}
           <Nav.Item>
             <Nav.Link eventKey="link-2" href="/resume">
               Resume
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
+          {/* <Nav.Item>
             <Nav.Link eventKey="link-3" href="/about">
               About Me
             </Nav.Link>
-          </Nav.Item>
+          </Nav.Item> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

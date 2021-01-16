@@ -1,3 +1,34 @@
-img > about-photo {
-  height: 5vh;
+.about {
+  margin: 1vw;
+  border: 5px solid black;
+  border-radius: 25px;
+  max-height: 50vh;
+  overflow: auto;
+}
+
+.about-content {
+  display: flex;
+  margin: 1vw;
+}
+
+.about-text {
+  margin: 1vw;
+  width: 55vw;
+}
+
+.about-photo > img {
+  margin: 1vw;
+  height: 14em;
+  margin-right: 10vw;
+}
+
+.about-links {
+  margin: 1vw;
+  justify-content: center;
+}
+
+.about-links > .bi {
+  width: 3.5em;
+  height: 3.5em;
+  padding: 0.25vw;
 }
