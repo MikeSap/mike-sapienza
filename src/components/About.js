@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "react-bootstrap/Image";
 import img from "../assets/mikeSap.jpg";
+import Email from "./Email";
 import Container from "react-bootstrap/Container";
-import div from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 const About = (props) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = (e) => {
+    setShow(false);
+    e.stopPropagation();
+  };
+
+  const handleShow = (e) => {
+    setShow(true);
+    e.stopPropagation();
+  };
+
+  const openGit = () => {
+    const win = window.open("https://github.com/MikeSap", "_blank");
+    win.focus();
+  };
+
   return (
     <Container className="about">
       <div className="about-content">
@@ -13,27 +29,29 @@ const About = (props) => {
           Experienced live sound engineer making a career pivot to software
           engineering. With experience in the fast-paced events industry,
           working events such as Lollapalooza and being part of a team on
-          international tours, my strong-suits include troubleshooting and
-          staying calm under pressure. Technologically minded and a quick
-          learner, I am excited to learn new JavaScript frameworks and new
-          languages as my career as a software engineer develops, while
-          continuing to master React and Ruby on Rails. As a recent grad from
-          Flatiron School, I gained a wealth of knowledge with Ruby on Rails,
-          JavaScript, and React. I have found that my expertise in a fast-paced
-          technical environment has helped me to quickly understand code
-          structures and handle data management. I also still pursue sound
-          engineering opportunities. Experienced audio engineer with a
-          demonstrated history of working in the entertainment industry. I am
-          skilled in sound, sound reinforcement, live events, music, and
-          entertainment. My degree is a Bachelor of Arts focused in live &
-          installed sound from Columbia College Chicago.
+          international tours, my strong-suits include troubleshooting,
+          attention to detail and working well on a team. Technologically minded
+          and a quick learner, I am excited to learn new JavaScript frameworks
+          and new languages as my career as a software engineer develops, while
+          continuing to master React and Ruby on Rails. I have found that my
+          expertise in a fast-paced technical environment has helped me to
+          quickly understand code structures and handle data management. I also
+          still pursue sound engineering opportunities. My degree is a Bachelor
+          of Arts focused in live & installed sound from Columbia College
+          Chicago and I also graduated from Flatiron School's Software
+          Engineering bootcamp.
         </div>
         <div className="about-photo">
           <Image src={img} roundedCircle />
         </div>
 
         <div className="about-links">
-          <div className="link-1">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/mike-sapienza/"
+            className="link-1"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -42,8 +60,8 @@ const About = (props) => {
             >
               <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
             </svg>
-          </div>
-          <div className="link-2">
+          </a>
+          <div onClick={handleShow} className="link-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -52,8 +70,10 @@ const About = (props) => {
             >
               <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.818l5.724 3.465L8 8.917l1.276.766L15 6.218V5.4a1 1 0 0 0-.53-.882l-6-3.2zM15 7.388l-4.754 2.877L15 13.117v-5.73zm-.035 6.874L8 10.083l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738zM1 13.117l4.754-2.852L1 7.387v5.73zM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2z" />
             </svg>
+            <Email show={show} handleClose={handleClose} />
           </div>
           <svg
+            onClick={openGit}
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
             class="bi bi-github"

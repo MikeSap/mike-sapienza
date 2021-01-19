@@ -1,3 +1,7 @@
+.navbar-brand > img {
+  height: 10vh;
+}
+
 .about {
   margin: 1vw;
   border: 5px solid black;
@@ -19,16 +23,35 @@
 .about-photo > img {
   margin: 1vw;
   height: 14em;
-  margin-right: 10vw;
+  margin-right: 5vw;
+  margin-top: 2vw;
 }
 
 .about-links {
-  margin: 1vw;
-  justify-content: center;
+  margin-top: 3vw;
+  margin-right: 5vw;
 }
 
 .about-links > .bi {
-  width: 3.5em;
-  height: 3.5em;
+  width: 3em;
+  height: 3em;
   padding: 0.25vw;
+}
+
+.projects-header {
+  text-align: center;
+}
+
+.react-pdf__Page {
+  border: 5px solid black;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.react-pdf__Page__textContent {
+  margin-left: 14vw;
+}
+
+.react-pdf__Page__canvas {
+  margin-left: 14vw;
 }

@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Document, Page } from "react-pdf";
 import res from "./pdf/mikesap.pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import Container from "react-bootstrap/Container";
 
 
 const Resume = (props) => {
-  const [pageNumber, setPageNumber] = useState(1);
-
-  const onDocumentLoadSuccess = ({ numPages }) => {
-    setPageNumber(1);
-  }
 
   const removeTextLayerOffset = () => {
     const textLayers = document.querySelectorAll(
@@ -24,15 +20,11 @@ const Resume = (props) => {
   }
 
   return (
-    <>
-      <Document
-        file={res}
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
-        <Page pageNumber={pageNumber} onLoadSuccess={removeTextLayerOffset} />;
-      </Document>
-      <div></div>
-    </>
+    <Container>
+        <Document file={res} >
+          <Page pageNumber={1} onLoadSuccess={removeTextLayerOffset} />
+        </Document>
+    </Container>
   );
 };
 
