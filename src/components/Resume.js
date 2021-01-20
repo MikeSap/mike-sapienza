@@ -20,11 +20,11 @@ const Resume = (props) => {
   }
 
   return (
-    <Container>
+    <div >
         <Document file={res} >
           <Page pageNumber={1} onLoadSuccess={removeTextLayerOffset} />
         </Document>
-    </Container>
+    </div>
   );
 };
 

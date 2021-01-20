@@ -55,7 +55,7 @@ p.card-text {
   overflow: auto;
 }
 .card-footer {
-    margin-bottom: 1vh;
+  margin-bottom: 1vh;
 }
 
 .projects-header {
@@ -63,16 +63,22 @@ p.card-text {
 }
 
 .react-pdf__Page {
-  border: 5px solid black;
-  max-height: 70vh;
+  /* border: 5px solid black; */
+  max-height: 80vh;
+  max-width: 99vw;
+  margin: 1vw;
   overflow: auto;
 }
 
 .react-pdf__Page__textContent {
-  margin-left: 14vw;
+  border: 5px solid black;
+  margin-left: 30vw;
 }
 
 .react-pdf__Page__canvas {
-  margin-left: 14vw;
+  margin-left: 30vw;
 }
 
+.react-pdf__Page__annotations.annotationLayer {
+  margin-left: 30vw;
+}
