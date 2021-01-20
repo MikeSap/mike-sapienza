@@ -7,7 +7,9 @@ import logo from "../assets/logo.png"
 
 const NavBar = (props) => {
   return (
-    <Navbar collapseOnSelect expand="lg" sticky="top" variant="dark" bg="dark">
+    <Navbar collapseOnSelect expand="lg" 
+    sticky="top"
+     variant="dark" bg="dark">
       <Navbar.Brand href="/">
         <img src={logo} alt="Mike Sapienza Logo" className="ml-auto" />
       </Navbar.Brand>

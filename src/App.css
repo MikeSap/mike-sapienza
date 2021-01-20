@@ -1,6 +1,8 @@
 .navbar {
-  margin: 1vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
+
 .navbar-brand > img {
   height: 10vh;
 }
@@ -64,21 +66,18 @@ p.card-text {
 
 .react-pdf__Page {
   /* border: 5px solid black; */
-  max-height: 80vh;
+  /* max-height: 80vh; */
   max-width: 99vw;
   margin: 1vw;
-  overflow: auto;
+  /* overflow: auto; */
+}
+
+.react-pdf__Document {
+  margin: 1vw;
+  display: flex;
+  justify-content: center;
 }
 
 .react-pdf__Page__textContent {
   border: 5px solid black;
-  margin-left: 30vw;
-}
-
-.react-pdf__Page__canvas {
-  margin-left: 30vw;
-}
-
-.react-pdf__Page__annotations.annotationLayer {
-  margin-left: 30vw;
 }
