@@ -82,7 +82,7 @@ const Projects = (props) => {
   };
 
   return (
-    <Container>
+    <Container className="projects">
       <div className="projects-header">
         <h3>Projects</h3>
       </div>

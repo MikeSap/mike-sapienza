@@ -3,7 +3,7 @@
 }
 
 .about {
-  margin: 1vw;
+  margin-top: 1vh;
   border: 5px solid black;
   border-radius: 25px;
   max-height: 50vh;
@@ -36,6 +36,15 @@
   width: 3em;
   height: 3em;
   padding: 0.25vw;
+}
+
+p.card-text {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.card {
+  height: fit-content;
 }
 
 .projects-header {
