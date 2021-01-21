@@ -1,8 +1,7 @@
 import React from "react";
-import { PDFDownloadLink, Document, Page } from "react-pdf";
+import { Document, Page } from "react-pdf";
 import res from "./pdf/mikesap.pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import Container from "react-bootstrap/Container";
 
 const Resume = (props) => {
   const removeTextLayerOffset = () => {
@@ -22,6 +21,11 @@ const Resume = (props) => {
       <Document file={res}>
         <Page pageNumber={1} onLoadSuccess={removeTextLayerOffset} />
       </Document>
+      <div className="download-pdf">
+        <a target="_blank" rel="noopener noreferrer" href={res}>
+          View file...
+        </a>
+      </div>
     </>
   );
 };
