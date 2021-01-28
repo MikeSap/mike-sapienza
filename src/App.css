@@ -11,7 +11,7 @@
   margin-top: 1vh;
   border: 5px solid black;
   border-radius: 25px;
-  max-height: 50vh;
+  max-height: 40vh;
   overflow: auto;
 }
 
@@ -27,17 +27,16 @@
 
 .about-photo > img {
   margin: 1vw;
-  height: 14em;
+  height: 10em;
   margin-right: 5vw;
   margin-top: 2vw;
 }
 
 .about-links {
-  margin-top: 3vw;
-  margin-right: 5vw;
+  margin-top: 2.25vw;
 }
 
-.about-links > .bi {
+.about-links > .link > .alink {
   width: 3em;
   height: 3em;
   padding: 0.25vw;
@@ -49,7 +48,7 @@ p.card-text {
 }
 
 .card {
-  height: 22vh;
+  height: 28vh;
 }
 
 .card-body {
@@ -62,6 +61,7 @@ p.card-text {
 
 .projects-header {
   text-align: center;
+  margin-top: 3vh;
 }
 
 .react-pdf__Page {
