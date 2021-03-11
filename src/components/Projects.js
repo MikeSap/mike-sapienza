@@ -156,7 +156,10 @@ const Projects = (props) => {
         <Card className="text-center">
           <Card.Header>Recipalooza</Card.Header>
           <Card.Body>
-            <Card.Text>CLI App written in ruby that searches for recipes from spoonacular api based on ingredients in a user's pantry</Card.Text>
+            <Card.Text>
+              CLI App written in ruby that searches for recipes from spoonacular
+              api based on ingredients in a user's pantry
+            </Card.Text>
           </Card.Body>
           <Card.Footer className="text-muted">
             {projectLinks(null, "https://github.com/MikeSap/Recipalooza")}

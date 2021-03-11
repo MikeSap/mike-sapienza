@@ -5,38 +5,58 @@ import NavBar from "./components/NavBar";
 import Resume from "./components/Resume";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <NavBar />
       <Switch>
         <Route
-          exact path="/"
+          exact
+          path="/"
           render={() => {
-            return <div>
-              <About />
-              <Projects />
-              {/* <Resume /> */}
-              </div>;
+            return (
+              <div>
+                <About />
+                <Skills />
+                {/* <Projects /> */}
+                {/* <Resume /> */}
+              </div>
+            );
           }}
         />
         <Route
-          exact path="/projects"
+          exact
+          path="/projects"
           render={() => {
-            return <div><Projects /></div>;
+            return (
+              <div>
+                <Projects />
+              </div>
+            );
           }}
         />
         <Route
-          exact path="/resume"
+          exact
+          path="/resume"
           render={() => {
-            return <div><Resume /></div>;
+            return (
+              <div>
+                <Resume />
+              </div>
+            );
           }}
         />
         <Route
-          exact path="/about"
+          exact
+          path="/about"
           render={() => {
-            return <div><About /></div>;
+            return (
+              <div>
+                <About />
+              </div>
+            );
           }}
         />
       </Switch>
