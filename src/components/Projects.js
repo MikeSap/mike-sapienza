@@ -82,7 +82,7 @@ const Projects = (props) => {
   };
 
   return (
-    <Container className="projects">
+    <>
       <div className="projects-header">
         <h3>Projects</h3>
       </div>
@@ -166,7 +166,7 @@ const Projects = (props) => {
           </Card.Footer>
         </Card>
       </Carousel>
-    </Container>
+    </>
   );
 };
 
