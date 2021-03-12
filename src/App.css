@@ -14,8 +14,8 @@ body {
 .navbar {
   margin-left: 1em;
   margin-right: 1em;
-  margin-top: 1em;
   border: 3px solid #887080;
+  background: #eaeaea;
   border-radius: 1em;
 }
 
@@ -68,7 +68,8 @@ body {
 /* SKILL CARDS */
 
 .card.skill {
-  height: 28vh;
+  min-height: 20em;
+  background: transparent;
 }
 
 .skills {
@@ -86,6 +87,15 @@ body {
   font-size: 2em;
 }
 
+.list-group-item {
+  background-color: transparent !important;
+  font-size: 1em;
+}
+
+.list-group-item > svg {
+  font-size: 2em;
+}
+
 /* PROJECT CARDS  */
 
 p.card-text {
@@ -95,6 +105,7 @@ p.card-text {
 
 .card.project {
   height: 28vh;
+  background: transparent;
 }
 
 .project > .card-body {
@@ -104,10 +115,11 @@ p.card-text {
 
 .project > .card-footer {
   margin-bottom: 1vh;
+  background: transparent;
 }
 
 .projects {
-  background: rgb(85, 85, 85);
+  /* background: rgb(85, 85, 85); */
   margin: 2em;
   padding-bottom: 2em;
   padding-top: 0.5em;
@@ -136,5 +148,5 @@ p.card-text {
 }
 
 .react-pdf__Page__textContent {
-  border: 5px solid black;
+  border: 5px solid #887080;
 }
