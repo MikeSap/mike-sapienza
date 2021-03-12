@@ -5,14 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
-import {
-  SiReact,
-  GrReactjs,
-  SiHtml5,
-  SiRuby,
-  SiCss3,
-  SiPostgresql,
-} from "react-icons/fa";
+import { DiReact, DiRuby, DiMaterializecss, DiJsBadge } from "react-icons/di";
 
 function Skills() {
   return (
@@ -23,7 +16,10 @@ function Skills() {
           <Card className="text-center skill">
             <Card.Body>
               <Card.Header>Technologies</Card.Header>
-              <Card.Text>JavaScript HTML5 Ruby CSS PostgreSQL SQLite</Card.Text>
+              <Card.Text>
+                <DiJsBadge />
+                HTML5 Ruby CSS PostgreSQL SQLite
+              </Card.Text>
             </Card.Body>
           </Card>
         </Col>
