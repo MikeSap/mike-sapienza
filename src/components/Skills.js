@@ -63,7 +63,7 @@ function Skills() {
               <Card.Header>Frameworks/Libraries</Card.Header>
               <ListGroup variant="flush">
                 <ListGroup.Item>
-                  <SiReact /> React
+                  <SiReact /> React/React Native
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <SiRedux /> Redux

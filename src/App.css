@@ -98,36 +98,51 @@ body {
 
 /* PROJECT CARDS  */
 
-p.card-text {
-  padding-left: 5vw;
-  padding-right: 5vw;
-}
-
-.card.project {
-  height: 28vh;
-  background: transparent;
-}
-
-.project > .card-body {
-  max-height: 15vh;
-  overflow: auto;
-}
-
-.project > .card-footer {
-  margin-bottom: 1vh;
-  background: transparent;
-}
-
-.carousel-container {
-  margin: 2em;
-  padding-bottom: 2em;
-  border-radius: 1em;
+.projects {
+  width: 100vw;
 }
 
 .projects-header {
   margin: 2em;
   padding-top: 0.5em;
   text-align: center;
+}
+
+.card-text {
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.card.project {
+  height: 70vh;
+  background: transparent;
+}
+
+.card.project > .card-header {
+  text-align: center;
+}
+
+.project > .card-body {
+  display: flex;
+  overflow: auto;
+}
+
+.card.project > .card-body img {
+  height: 40vh;
+  width: 40vw;
+  margin-left: 3vw;
+}
+
+.project > .card-footer {
+  /* margin-bottom: 1vh; */
+  background: transparent;
+  text-align: center;
+}
+
+.carousel-container {
+  margin: 2em;
+  padding-bottom: 2em;
+  border-radius: 1em;
 }
 
 /* RESUME */
@@ -147,5 +162,5 @@ p.card-text {
 }
 
 .react-pdf__Page__textContent {
-  border: 5px solid #887080;
+  border: 2em solid #887080;
 }
