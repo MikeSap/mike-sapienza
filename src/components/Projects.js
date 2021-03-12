@@ -107,7 +107,7 @@ const Projects = (props) => {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-5-vw"
       >
-        <Card className="text-center">
+        <Card className="text-center project">
           <Card.Header>Staged</Card.Header>
           <Card.Body>
             <Card.Text>
@@ -124,7 +124,7 @@ const Projects = (props) => {
           </Card.Footer>
         </Card>
 
-        <Card className="text-center">
+        <Card className="text-center project">
           <Card.Header>DCCCVIII</Card.Header>
           <Card.Body>
             <Card.Text>
@@ -140,7 +140,7 @@ const Projects = (props) => {
           </Card.Footer>
         </Card>
 
-        <Card className="text-center">
+        <Card className="text-center project">
           <Card.Header>Eventopedia</Card.Header>
           <Card.Body>
             <Card.Text>
@@ -153,7 +153,7 @@ const Projects = (props) => {
           </Card.Footer>
         </Card>
 
-        <Card className="text-center">
+        <Card className="text-center project">
           <Card.Header>Recipalooza</Card.Header>
           <Card.Body>
             <Card.Text>

@@ -1,22 +1,26 @@
 body {
-  background: linear-gradient(
+  background: linear-gradient(0deg, #7e8461 0%, #eaeaea 100%) fixed;
+}
+/* background: linear-gradient(
       0deg,
-      rgba(25, 68, 1, 1) 0%,
-      rgba(102, 203, 70, 1) 100%
+      rgb(93, 51, 100) 0%,
+      rgb(135, 127, 139) 100%
     )
     fixed;
-}
+} */
+
+/*  NAV BAR */
 
 .navbar {
-  background: rgb(85, 85, 85);
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  border: 3px solid #887080;
   border-radius: 1em;
-
-  margin-left: 1vw;
-  margin-right: 1vw;
 }
 
 .navbar-brand > img {
-  height: 9vh;
+  height: 8vh;
 }
 
 .navs {
@@ -24,10 +28,12 @@ body {
   width: 100%;
 }
 
+/* ABOUT SECTION */
+
 .about {
   margin-top: 3em;
-  border: 3px solid black;
-  border-radius: 25px;
+  border: 3px solid #887080;
+  border-radius: 1em;
   max-height: 45vh;
   overflow: auto;
 }
@@ -59,20 +65,44 @@ body {
   padding: 0.25vw;
 }
 
+/* SKILL CARDS */
+
+.card.skill {
+  height: 28vh;
+}
+
+.skills {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  border: 3px solid #887080;
+  /* 012A36  GUNMETAL?*/
+  border-radius: 1em;
+  padding-bottom: 1em;
+}
+
+.skills-header {
+  text-align: center;
+  font-size: 2em;
+}
+
+/* PROJECT CARDS  */
+
 p.card-text {
   padding-left: 5vw;
   padding-right: 5vw;
 }
 
-.card {
+.card.project {
   height: 28vh;
 }
 
-.card-body {
+.project > .card-body {
   max-height: 15vh;
   overflow: auto;
 }
-.card-footer {
+
+.project > .card-footer {
   margin-bottom: 1vh;
 }
 
@@ -88,6 +118,8 @@ p.card-text {
   text-align: center;
   /* margin-top: 3vh; */
 }
+
+/* RESUME */
 
 .react-pdf__Page {
   /* border: 5px solid black; */
@@ -105,14 +137,4 @@ p.card-text {
 
 .react-pdf__Page__textContent {
   border: 5px solid black;
-}
-
-.skills {
-  margin-top: 2em;
-  text-align: center;
-}
-
-.skills-header {
-  text-align: center;
-  font-size: 2em;
 }
