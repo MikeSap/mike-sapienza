@@ -66,10 +66,10 @@ const Projects = (props) => {
       </div>
       <Carousel
         arrows={true}
-        renderButtonGroupOutside={true}
+        // renderButtonGroupOutside={true}
         swipeable={true}
         draggable={false}
-        showDots={true}
+        showDots={false}
         responsive={responsive}
         ssr={true} // server side rendering
         infinite={true}
@@ -89,19 +89,13 @@ const Projects = (props) => {
       >
         <Card className="project">
           <Card.Header>Staged</Card.Header>
-          <Card.Body>
-            <Container>
-              <Row>
-                <Image src={staged} fluid />
-              </Row>
-              <Row>
-                <Card.Text>
-                  Staged is a social media platform for musicians to promote
-                  their upcoming artistic releases in a curated space
-                </Card.Text>
-              </Row>
-            </Container>
-          </Card.Body>
+          <Image src={staged} />
+
+          <Card.Text>
+            Staged is a social media platform for musicians to promote their
+            upcoming artistic releases in a curated space
+          </Card.Text>
+
           <Card.Footer className="text-muted project">
             {projectLinks(
               "https://staged-app.herokuapp.com",
@@ -113,19 +107,14 @@ const Projects = (props) => {
 
         <Card className="project">
           <Card.Header>DCCCVIII</Card.Header>
-          <Card.Body>
-            <Container>
-              <Row>
-                <Image src={dcccviii} fluid />
-              </Row>
-              <Row>
-                <Card.Text>
-                  A drum machine inspired by retro hardware where users can
-                  create and save unique songs created within the app
-                </Card.Text>
-              </Row>
-            </Container>
-          </Card.Body>
+
+          <Image src={dcccviii} fluid />
+
+          <Card.Text>
+            A drum machine inspired by retro hardware where users can create and
+            save unique songs created within the app
+          </Card.Text>
+
           <Card.Footer className="text-muted">
             {projectLinks(
               "https://dcccviii.herokuapp.com",
@@ -136,19 +125,14 @@ const Projects = (props) => {
 
         <Card className="project">
           <Card.Header>Eventopedia</Card.Header>
-          <Card.Body>
-            <Container>
-              <Row>
-                <Image src={eventopedia} fluid />
-              </Row>
-              <Row>
-                <Card.Text>
-                  An all in one app for companies within the live events
-                  industry to manage employee schedules and rental inventory
-                </Card.Text>
-              </Row>
-            </Container>
-          </Card.Body>
+
+          <Image src={eventopedia} fluid />
+
+          <Card.Text>
+            An all in one app for companies within the live events industry to
+            manage employee schedules and rental inventory
+          </Card.Text>
+
           <Card.Footer className="text-muted">
             {projectLinks(null, "https://github.com/MikeSap/eventopedia")}
           </Card.Footer>
@@ -156,19 +140,22 @@ const Projects = (props) => {
 
         <Card className="project">
           <Card.Header>Recipalooza</Card.Header>
-          <Card.Body>
-            <Container>
-              <Row>
-                <Image src={recipalooza} fluid />
-              </Row>
-              <Row>
-                <Card.Text>
-                  CLI App written in ruby that searches for recipes from
-                  spoonacular api based on ingredients in a user's pantry
-                </Card.Text>
-              </Row>
-            </Container>
-          </Card.Body>
+
+          <iframe
+            className="youtubeDemo"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/0XECIzAGbko"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+
+          <Card.Text>
+            CLI App written in ruby that searches for recipes from spoonacular
+            api based on ingredients in a user's pantry
+          </Card.Text>
+
           <Card.Footer className="text-muted">
             {projectLinks(null, "https://github.com/MikeSap/Recipalooza")}
           </Card.Footer>

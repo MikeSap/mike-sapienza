@@ -11,9 +11,11 @@ body {
 
 /*  NAV BAR */
 
-.navbar {
+.navbar.navbar-expand-lg.navbar-light {
   margin-left: 1em;
   margin-right: 1em;
+  top: 0em;
+  position: sticky;
   border: 3px solid #887080;
   background: #eaeaea;
   border-radius: 1em;
@@ -98,10 +100,6 @@ body {
 
 /* PROJECT CARDS  */
 
-.projects {
-  width: 100vw;
-}
-
 .projects-header {
   margin: 2em;
   padding-top: 0.5em;
@@ -114,46 +112,48 @@ body {
 }
 
 .card.project {
-  height: 70vh;
   background: transparent;
+  /* width: 40vw; */
 }
+
+/* .react-multi-carousel-track {
+  display: flex;
+} */
 
 .card.project > .card-header {
   text-align: center;
 }
 
-.project > .card-body {
-  display: flex;
-  overflow: auto;
-}
-
-.card.project > .card-body img {
+.card.project > :is(img, .youtubeDemo) {
   height: 40vh;
   width: 40vw;
-  margin-left: 3vw;
+  margin: auto;
 }
 
 .project > .card-footer {
-  /* margin-bottom: 1vh; */
   background: transparent;
   text-align: center;
   font-size: 2em;
 }
 
 .carousel-container {
-  margin: 2em;
   padding-bottom: 2em;
   border-radius: 1em;
+}
+
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
+  right: calc(4% + -50px);
+}
+
+button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+  left: calc(4% + -50px);
 }
 
 /* RESUME */
 
 .react-pdf__Page {
-  /* border: 5px solid black; */
-  /* max-height: 80vh; */
   max-width: 99vw;
   margin: 1vw;
-  /* overflow: auto; */
 }
 
 .react-pdf__Document {
@@ -163,5 +163,5 @@ body {
 }
 
 .react-pdf__Page__textContent {
-  border: 2em solid #887080;
+  border: 0.5em solid #887080;
 }

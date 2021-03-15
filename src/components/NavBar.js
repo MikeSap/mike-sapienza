@@ -10,7 +10,7 @@ const NavBar = (props) => {
     <Navbar
       collapseOnSelect
       expand="lg"
-      sticky="top"
+      // sticky="top"
       //  variant="dark" bg="dark"
     >
       <Navbar.Brand href="/">
