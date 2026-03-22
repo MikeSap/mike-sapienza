@@ -1,5 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 import "./App.css";
+
+const MODE_PARAM = "mode";
+
+/** @returns {boolean | null} null if param absent or unrecognized */
+function parseModeFromSearch(search) {
+  const v = new URLSearchParams(search).get(MODE_PARAM)?.toLowerCase();
+  if (v === "sound" || v === "audio") return true;
+  if (v === "dev") return false;
+  return null;
+}
 
 const DEV_DATA = {
   bio: "Full-stack developer based in CA. I build web apps and tools — from browser-based audio sequencers to live event platforms. Comfortable across the stack: React, Ruby on Rails, PostgreSQL.",
@@ -49,7 +60,28 @@ const SOUND_DATA = {
 };
 
 export default function App() {
-  const [isSound, setIsSound] = useState(false);
+  const history = useHistory();
+  const location = useLocation();
+
+  const [isSound, setIsSound] = useState(
+    () => parseModeFromSearch(location.search) ?? false
+  );
+
+  useEffect(() => {
+    const parsed = parseModeFromSearch(location.search);
+    if (parsed !== null) setIsSound(parsed);
+  }, [location.search]);
+
+  const setMode = useCallback(
+    (sound) => {
+      setIsSound(sound);
+      const params = new URLSearchParams(location.search);
+      params.set(MODE_PARAM, sound ? "sound" : "dev");
+      const search = params.toString();
+      history.replace({ pathname: location.pathname, search: search ? `?${search}` : "" });
+    },
+    [history, location.pathname, location.search]
+  );
 
   return (
     <div className="wrap">
@@ -61,7 +93,7 @@ export default function App() {
             <input
               type="checkbox"
               checked={isSound}
-              onChange={(e) => setIsSound(e.target.checked)}
+              onChange={(e) => setMode(e.target.checked)}
             />
             <span className="toggle-track" />
             <span className="toggle-thumb" />
